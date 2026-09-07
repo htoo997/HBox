@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import CsvToJson from './pages/CsvToJson.vue'
 import Dashboard from './pages/Dashboard.vue'
 import ImageToPdf from './pages/ImageToPdf.vue'
 import PdfMerge from './pages/PdfMerge.vue'
@@ -13,6 +14,7 @@ export const router = createRouter({
     { path: '/tools/pdf-merge', name: 'pdf-merge', component: PdfMerge, meta: { title: 'PDF Merge · HBox' } },
     { path: '/tools/image-to-pdf', name: 'image-to-pdf', component: ImageToPdf, meta: { title: 'Image to PDF · HBox' } },
     { path: '/tools/pdf-sign', name: 'pdf-sign', component: PdfSign, meta: { title: 'PDF Sign · HBox' } },
+    { path: '/tools/csv-to-json', name: 'csv-to-json', component: CsvToJson, meta: { title: 'CSV to JSON · HBox' } },
   ],
 })
 

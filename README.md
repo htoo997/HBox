@@ -1,6 +1,6 @@
 # HBox
 
-A browser toolbox of local PDF utilities. Files stay on your device.
+A browser toolbox of local file utilities. Files stay on your device.
 
 ## Tools
 
@@ -8,6 +8,7 @@ A browser toolbox of local PDF utilities. Files stay on your device.
 - **PDF Merge** — combine multiple PDFs into one file
 - **Image to PDF** — turn WEBP, JPG, PNG, and JPEG images into a PDF
 - **PDF Sign** — draw or upload a signature and place it on any PDF pages you choose
+- **CSV to JSON** — preview a CSV as a table and JSON, then download the file
 
 ## Run
 

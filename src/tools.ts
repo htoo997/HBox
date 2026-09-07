@@ -35,4 +35,11 @@ export const tools: Tool[] = [
     to: '/tools/pdf-sign',
     accent: '#fab387',
   },
+  {
+    id: 'csv-to-json',
+    name: 'CSV to JSON',
+    description: 'Preview a CSV as a table and JSON, then download the file.',
+    to: '/tools/csv-to-json',
+    accent: '#94e2d5',
+  },
 ]

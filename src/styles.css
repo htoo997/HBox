@@ -14,6 +14,8 @@ body,
 #app {
   margin: 0;
   min-height: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 a {
@@ -35,13 +37,15 @@ body {
 
 .shell {
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .topbar {
   display: flex;
   align-items: center;
   gap: 14px;
-  max-width: 960px;
+  width: min(960px, 100%);
   margin: 0 auto;
   padding: 24px 20px 8px;
 }
@@ -68,7 +72,7 @@ body {
 }
 
 .dashboard {
-  max-width: 960px;
+  width: min(960px, 100%);
   margin: 0 auto;
   padding: 24px 20px 64px;
 }
@@ -86,7 +90,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: 16px;
 }
 
@@ -130,12 +134,18 @@ body {
 
 .page {
   display: grid;
-  place-items: start center;
+  justify-items: safe center;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
   padding: 24px 16px 64px;
+  overflow-x: clip;
 }
 
 .card {
   width: min(560px, 100%);
+  max-width: 100%;
+  min-width: 0;
   background: #1e1e2e;
   border: 1px solid #313244;
   border-radius: 20px;
@@ -411,4 +421,86 @@ body {
 .dropzone.compact {
   min-height: 72px;
   margin: 0;
+}
+
+.preview-block {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0 0 16px;
+}
+
+.preview-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: #cdd6f4;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.preview-heading small {
+  color: #6c7086;
+  font-weight: 500;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a6adc8;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.table-scroll {
+  max-width: 100%;
+  max-height: 280px;
+  overflow: auto;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  background: #181825;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #313244;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.data-table th {
+  position: sticky;
+  top: 0;
+  background: #1e1e2e;
+  color: #a6adc8;
+  font-weight: 700;
+}
+
+.data-table td {
+  color: #cdd6f4;
+}
+
+.json-preview {
+  max-width: 100%;
+  max-height: 280px;
+  margin: 0;
+  overflow: auto;
+  padding: 14px;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  background: #181825;
+  color: #a6e3a1;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
 }

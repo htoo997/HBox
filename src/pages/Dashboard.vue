@@ -7,7 +7,7 @@ import { tools } from '../tools'
   <main class="dashboard">
     <section class="hero">
       <h1>Choose a tool</h1>
-      <p>Local PDF utilities. Files stay in your browser.</p>
+      <p>Local file utilities. Files stay in your browser.</p>
     </section>
 
     <section class="grid">
