@@ -77,15 +77,61 @@ body {
   padding: 24px 20px 64px;
 }
 
-.hero h1 {
+.hero-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
   margin: 0 0 8px;
+}
+
+.hero h1 {
+  margin: 0;
   font-size: 40px;
   letter-spacing: -0.04em;
 }
 
-.hero p {
+.hero > p {
   margin: 0 0 28px;
   color: #a6adc8;
+}
+
+.aqi {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  color: #6c7086;
+  white-space: nowrap;
+}
+
+.aqi-place {
+  max-width: 18ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aqi-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.aqi-value strong {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.aqi-value span,
+.aqi-fallback {
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .grid {
