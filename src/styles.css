@@ -1,0 +1,414 @@
+:root {
+  color-scheme: dark;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(66, 184, 131, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(137, 180, 250, 0.12), transparent 50%),
+    #11111b;
+}
+
+.shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 8px;
+}
+
+.brand {
+  color: #42b883;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topbar-copy {
+  color: #6c7086;
+}
+
+.back {
+  margin-left: auto;
+  color: #a6adc8;
+}
+
+.back:hover,
+.brand:hover {
+  color: #cdd6f4;
+}
+
+.dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 40px;
+  letter-spacing: -0.04em;
+}
+
+.hero p {
+  margin: 0 0 28px;
+  color: #a6adc8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.tool-tile {
+  display: grid;
+  gap: 10px;
+  min-height: 180px;
+  padding: 22px;
+  border: 1px solid #313244;
+  border-radius: 20px;
+  background: #1e1e2e;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+
+.tool-tile:hover {
+  border-color: #42b883;
+}
+
+.swatch {
+  width: 36px;
+  height: 6px;
+  border-radius: 99px;
+}
+
+.tool-tile h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tool-tile p {
+  margin: 0;
+  color: #a6adc8;
+  line-height: 1.45;
+}
+
+.open {
+  align-self: end;
+  color: #42b883;
+  font-weight: 700;
+}
+
+.page {
+  display: grid;
+  place-items: start center;
+  padding: 24px 16px 64px;
+}
+
+.card {
+  width: min(560px, 100%);
+  background: #1e1e2e;
+  border: 1px solid #313244;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.card.wide {
+  width: min(720px, 100%);
+}
+
+.card.stage {
+  width: min(860px, 100%);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #42b883;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -0.04em;
+}
+
+.lede,
+.status {
+  color: #a6adc8;
+  line-height: 1.5;
+}
+
+.dropzone {
+  display: grid;
+  place-items: center;
+  min-height: 132px;
+  margin: 24px 0 16px;
+  padding: 20px;
+  border: 1px dashed #45475a;
+  border-radius: 16px;
+  background: #181825;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone.dragging,
+.dropzone:hover {
+  border-color: #42b883;
+}
+
+.dropzone.filled {
+  border-style: solid;
+  border-color: #42b883;
+}
+
+.dropzone input {
+  display: none;
+}
+
+.status.error {
+  color: #f38ba8;
+}
+
+.status.ok {
+  color: #a6e3a1;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #a6adc8;
+}
+
+.field input {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #45475a;
+  border-radius: 12px;
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+.field input:focus {
+  outline: 2px solid #42b883;
+  border-color: #42b883;
+}
+
+.btn {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 12px;
+  background: #42b883;
+  color: #11111b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.queue {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.queue li {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid #313244;
+  border-radius: 12px;
+  background: #181825;
+}
+
+.queue strong {
+  display: block;
+}
+
+.queue small {
+  color: #6c7086;
+}
+
+.queue .warn {
+  color: #f9e2af;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.actions button {
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  background: transparent;
+  color: #cdd6f4;
+  cursor: pointer;
+}
+
+.actions button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.preview {
+  margin: 8px 0 20px;
+}
+
+.page-stage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #313244;
+  border-radius: 16px;
+  background: #fff;
+  user-select: none;
+  touch-action: none;
+}
+
+.page-stage > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.signature-overlay {
+  position: absolute;
+  display: grid;
+  cursor: grab;
+  touch-action: none;
+}
+
+.signature-overlay.grabbing {
+  cursor: grabbing;
+}
+
+.signature-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.resize-handle {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 2px solid #11111b;
+  border-radius: 4px;
+  background: #fab387;
+  cursor: nwse-resize;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  color: #a6adc8;
+}
+
+.pager button,
+.sign-pad-wrap .linkish,
+.sign-tools button {
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  background: transparent;
+  color: #cdd6f4;
+  cursor: pointer;
+}
+
+.pager button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pager.stamp-actions {
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.sign-tools {
+  display: grid;
+  gap: 12px;
+  margin: 8px 0 16px;
+}
+
+.sign-pad-wrap {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  color: #a6adc8;
+}
+
+.sign-pad {
+  width: 100%;
+  height: 132px;
+  border: 1px dashed #45475a;
+  border-radius: 16px;
+  background: #e6e9ef;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.sign-pad-wrap .linkish {
+  justify-self: start;
+}
+
+.dropzone.compact {
+  min-height: 72px;
+  margin: 0;
+}

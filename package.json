@@ -1,0 +1,32 @@
+{
+  "name": "hbox",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HBox toolbox for local PDF utilities",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:tui": "node scripts/check-node.mjs && NODE_OPTIONS='--experimental-ffi --disable-warning=ExperimentalWarning' vite --config vite.tui.config.ts",
+    "build:tui": "node scripts/check-node.mjs && vite build --config vite.tui.config.ts",
+    "start:tui": "node scripts/check-node.mjs && node --experimental-ffi --disable-warning=ExperimentalWarning dist/main.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.5.3",
+    "mupdf": "^1.28.1",
+    "vue": "^3.5.17",
+    "vue-router": "^4.6.4",
+    "vue-termui": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "typescript": "~5.8.3",
+    "vite": "^8.0.0"
+  }
+}

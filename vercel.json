@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "build": {
+    "env": {
+      "NODE_VERSION": "24"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
+
