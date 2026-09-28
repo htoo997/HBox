@@ -42,4 +42,11 @@ export const tools: Tool[] = [
     to: '/tools/csv-to-json',
     accent: '#94e2d5',
   },
+  {
+    id: 'exchange-rate',
+    name: 'Exchange Rate',
+    description: 'Convert between currencies with the latest mid-market rate.',
+    to: '/tools/exchange-rate',
+    accent: '#f9e2af',
+  },
 ]

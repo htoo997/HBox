@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CsvToJson from './pages/CsvToJson.vue'
 import Dashboard from './pages/Dashboard.vue'
+import ExchangeRate from './pages/ExchangeRate.vue'
 import ImageToPdf from './pages/ImageToPdf.vue'
 import PdfMerge from './pages/PdfMerge.vue'
 import PdfSign from './pages/PdfSign.vue'
@@ -15,6 +16,7 @@ export const router = createRouter({
     { path: '/tools/image-to-pdf', name: 'image-to-pdf', component: ImageToPdf, meta: { title: 'Image to PDF · HBox' } },
     { path: '/tools/pdf-sign', name: 'pdf-sign', component: PdfSign, meta: { title: 'PDF Sign · HBox' } },
     { path: '/tools/csv-to-json', name: 'csv-to-json', component: CsvToJson, meta: { title: 'CSV to JSON · HBox' } },
+    { path: '/tools/exchange-rate', name: 'exchange-rate', component: ExchangeRate, meta: { title: 'Exchange Rate · HBox' } },
   ],
 })
 
